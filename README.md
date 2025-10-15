@@ -1,16 +1,53 @@
-# React + Vite
+# 🤖 AI Customer Support Bot
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An AI-powered chatbot that simulates real-time customer support interactions using a Large Language Model (LLM).  
+It can answer FAQs, remember previous messages, and simulate escalation to a human agent when it cannot resolve a query.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- 🧠 **Conversational AI** – Uses OpenAI API for intelligent responses  
+- 💬 **Context Memory** – Remembers previous conversation messages  
+- ⚡ **FastAPI Backend** – RESTful API for chat and session management  
+- 🖥️ **React Frontend** – Simple and interactive chat interface  
+- 💾 **SQLite Database** – Stores chat history and sessions  
+- 🔄 **Escalation Simulation** – If the bot cannot answer, it escalates to support  
+- 🧱 **No Docker Needed** – Fully runs locally  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🏗️ Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ai-support-bot/
+│
+├── backend/
+│ ├── main.py
+│ ├── models.py
+│ ├── database.py
+│ ├── requirements.txt
+│ └── .env
+│
+└── frontend/
+├── src/
+│ ├── components/ChatBot.jsx
+│ ├── App.jsx
+│ └── main.jsx
+├── package.json
+└── vite.config.js
+
+---
+
+## ⚙️ Tech Stack
+
+**Backend:** FastAPI, SQLAlchemy, OpenAI, Uvicorn  
+**Frontend:** React (Vite), Axios  
+**Database:** SQLite  
+**Language:** Python + JavaScript  
+💡 Example Conversation
+
+User: Hi, what are your working hours?
+Bot: Our support team is available from 9 AM to 6 PM, Monday to Friday.
+User: I need to talk to an agent.
+Bot: I’m escalating your request to a human support representative. Please hold on!
+
